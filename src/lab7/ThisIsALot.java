@@ -1,6 +1,5 @@
 package lab7;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ThisIsALot {
@@ -9,39 +8,32 @@ public class ThisIsALot {
 		// TODO Auto-generated method stub
 		Scanner scnr = new Scanner(System.in);
 
-		try {
-			System.out.println("Enter your first name: ");
-			String name = scnr.nextLine();
-			valid(name);
-		} catch (InputMismatchException ex) {
-			scnr.nextLine();
-		}
+		System.out.println("Enter your first name: ");
+		String name = scnr.nextLine();
+		valid(name);
+		System.out.println("Enter your first name: ");
+		scnr.nextLine();
 
-		try {
-			System.out.println("Enter your email: ");
-			String email = scnr.nextLine();
-			emailValid(email);
-		} catch (InputMismatchException ex) {
-			scnr.nextLine();
-		}
+		System.out.println("Enter your email: ");
+		String email = scnr.nextLine();
+		emailValid(email);
+		System.out.println("Enter your email: ");
+		scnr.nextLine();
 
-		try {
-			System.out.println("Enter your number: ");
-			String number = scnr.nextLine();
-			numberValid(number);
-		} catch (InputMismatchException ex) {
-			scnr.nextLine();
-		}
+		System.out.println("Enter your number: ");
+		String number = scnr.nextLine();
+		numberValid(number);
+		System.out.println("Enter your number: ");
+		scnr.nextLine();
 
-		try {
 		System.out.println("Enter the date: ");
 		String date = scnr.nextLine();
 		dateValid(date);
-		}catch(InputMismatchException ex) {
+		System.out.println("Enter the date: ");
 		scnr.nextLine();
-		}
 
 		scnr.close();
+
 	}
 
 	private static void valid(String input) {
@@ -72,7 +64,7 @@ public class ThisIsALot {
 
 	private static void dateValid(String input) {
 		if (!input.matches("\\d{2}/\\d{2}[1,12]/\\d{4}")) {
-			System.out.println("Sorry, Date not valid.");
+			System.out.println("Sorry, Date not valid. Try Again: ");
 		} else {
 			System.out.println("Date is Valid!");
 		}
